@@ -9,7 +9,7 @@ const compiledMarkdown = computed(() => marked.parse(resume))
 </script>
 
 <template>
-  <div class="resume container is-max-desktop my-5">
+  <div class="resume container is-max-desktop p-5">
     <div class="content" v-html="compiledMarkdown" />
   </div>
 </template>
