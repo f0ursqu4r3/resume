@@ -34,6 +34,60 @@ const compiledMarkdown = computed(() => marked.parse(resume))
 </template>
 
 <style>
+/* ==========================================================================
+   Component Styles
+   ========================================================================== */
+.resume {
+  position: relative;
+  overflow: hidden;
+}
+
+.content-flicker {
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+  transform: scale(1, 0.9);
+  animation: textShadow 1.6s infinite;
+}
+
+/* ==========================================================================
+   Effects
+   ========================================================================== */
+
+.effects::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size:
+    100% 2px,
+    3px 100%;
+  pointer-events: none;
+}
+.effects::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+
+/* ==========================================================================
+   Toggle Switch
+   ========================================================================== */
 .toggle-switch {
   width: 100%;
   z-index: 100;
@@ -84,7 +138,6 @@ const compiledMarkdown = computed(() => marked.parse(resume))
   background-color: #003d00;
 }
 
-/* unchecked */
 .toggle-switch-input:not(:checked) + .slider::before {
   background-color: #000000;
 }
@@ -96,6 +149,10 @@ const compiledMarkdown = computed(() => marked.parse(resume))
 .toggle-switch-input:checked + .slider::after {
   transform: translateX(1.25rem);
 }
+
+/* ==========================================================================
+   Keyframes
+   ========================================================================== */
 
 /* scanlines */
 @keyframes flicker {
@@ -162,45 +219,6 @@ const compiledMarkdown = computed(() => marked.parse(resume))
   100% {
     opacity: 0.24387;
   }
-}
-
-.effects::before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background:
-    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 2;
-  background-size:
-    100% 2px,
-    3px 100%;
-  pointer-events: none;
-}
-.effects::after {
-  content: ' ';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(18, 16, 16, 0.1);
-  opacity: 0;
-  z-index: 2;
-  pointer-events: none;
-  animation: flicker 0.15s infinite;
-}
-
-.content-flicker {
-  color: #00ff00;
-  text-shadow: 0 0 10px #00ff00;
-  transform: scale(1, 0.9);
-  animation: textShadow 1.6s infinite;
 }
 
 @keyframes textShadow {
