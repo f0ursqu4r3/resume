@@ -8,9 +8,13 @@ Kapaau, HI 96755 | 916-241-5947 | [kdougan@gmail.com](mailto:kdougan@gmail.com)
 
 ## Technical Skills
 
-| Languages                                            | Tools & Frameworks                       |
-| ---------------------------------------------------- | ---------------------------------------- |
-| Python · Rust · Java · JavaScript · PHP · HTML · CSS | Git · Visual Studio Code · IntelliJ IDEA |
+### Languages
+
+Python · Rust · Java · JavaScript · PHP · HTML · CSS
+
+### Tools & Frameworks
+
+Git · Visual Studio Code · IntelliJ IDEA
 
 ---
 
@@ -57,6 +61,8 @@ Kapaau, HI 96755 | 916-241-5947 | [kdougan@gmail.com](mailto:kdougan@gmail.com)
 - Served as first-line support for both hardware and software inquiries, consistently driving high customer-satisfaction scores.
 - Documented solutions in internal databases, empowering colleagues with actionable troubleshooting guides.
 - Managed workloads with minimal supervision while meeting aggressive performance targets.
+
+---
 
 ## Formal Training
 

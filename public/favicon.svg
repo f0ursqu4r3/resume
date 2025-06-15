@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="426px" height="486px" viewBox="0 0 426 486" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>favicon</title>
+    <g id="favicon" stroke="none" fill="none" fill-rule="evenodd" stroke-linejoin="round" stroke-width="1">
+        <g id="Group" transform="translate(213, 243) rotate(-15) translate(-213, -243)translate(72, 60)" stroke="#000000">
+            <path d="M203.227768,-14.0857874 L296.085787,78.6202554 L296.085787,380.085787 L-14.0857874,380.085787 L-14.0857874,-14.0857874 L203.227768,-14.0857874 Z" id="Rectangle" stroke-width="28.1715747" fill="#FFFFFF"></path>
+            <line x1="42.6981746" y1="42.6975429" x2="240.182187" y2="42.6975429" id="Line" stroke-width="14.0857874" stroke-linecap="round"></line>
+            <line x1="42.8772547" y1="99.0406924" x2="240.003107" y2="99.0406924" id="Line-Copy" stroke-width="14.0857874" stroke-linecap="round"></line>
+            <line x1="42.8772547" y1="155.383842" x2="240.003107" y2="155.383842" id="Line-Copy-2" stroke-width="14.0857874" stroke-linecap="round"></line>
+            <line x1="42.8772547" y1="211.49652" x2="240.003107" y2="211.49652" id="Line-Copy-3" stroke-width="14.0857874" stroke-linecap="round"></line>
+            <line x1="42.8772547" y1="267.839669" x2="240.003107" y2="267.839669" id="Line-Copy-4" stroke-width="14.0857874" stroke-linecap="round"></line>
+            <line x1="42.8772547" y1="324.182819" x2="240.003107" y2="324.182819" id="Line-Copy-5" stroke-width="14.0857874" stroke-linecap="round"></line>
+            <path d="M190.442382,-17.0030494 L299.003049,91.5576178 L190.442382,91.5576178 L190.442382,-17.0030494 Z" id="Rectangle-2" stroke-width="14.0857874" fill="#F2F2F2"></path>
+        </g>
+    </g>
+</svg>
