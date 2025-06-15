@@ -20,7 +20,7 @@ Git · Visual Studio Code · IntelliJ IDEA
 
 ## Professional Experience
 
-###  Apple Inc. — Cupertino, CA
+### Apple Inc. — Cupertino, CA
 
 **Software Engineer, Apple Services Engineering (IC 4)**
 *2019 – 2025*
@@ -31,7 +31,7 @@ Git · Visual Studio Code · IntelliJ IDEA
 
 ---
 
-###  Apple Inc. — Sunnyvale, CA
+### Apple Inc. — Sunnyvale, CA
 
 **Software Engineer, App Review Infrastructure (SWE 3)**
 *2013 – 2019*
@@ -42,7 +42,7 @@ Git · Visual Studio Code · IntelliJ IDEA
 
 ---
 
-###  Apple Inc. — Elk Grove, CA
+### Apple Inc. — Elk Grove, CA
 
 **Apple Developer Email & Phone Support Advisor**
 *2011 – 2013*
@@ -53,7 +53,7 @@ Git · Visual Studio Code · IntelliJ IDEA
 
 ---
 
-###  Apple Inc. / Volt Staffing — Elk Grove, CA
+### Apple Inc. / Volt Staffing — Elk Grove, CA
 
 **MobileMe Chat & Phone Support Advisor**
 *2010 – 2011*
