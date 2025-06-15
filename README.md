@@ -1,6 +1,15 @@
 # resume
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a Vue 3 + TypeScript resume website that renders markdown content with Bulma CSS styling.
+
+## Deployment
+
+This site is automatically deployed to GitHub Pages using GitHub Actions. When you push to the `main` branch, the workflow will:
+
+1. Build the site using Vite
+2. Deploy it to GitHub Pages
+
+The site will be available at: `https://[your-username].github.io/resume/`
 
 ## Recommended IDE Setup
 
