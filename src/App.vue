@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { marked } from 'marked'
-import { computed, ref } from 'vue'
+import { computed, ref, type ComputedRef, type Ref } from 'vue'
 import 'bulma/css/bulma.css'
 
 import resume from '@/assets/resume.md?raw'
 
-const effectsEnabled = ref(true)
-const compiledMarkdown = computed(() => marked.parse(resume))
+const effectsEnabled: Ref<boolean> = ref(true)
+const compiledMarkdown: ComputedRef<string | Promise<string>> = computed(() => marked.parse(resume))
 </script>
 
 <template>
-  <div class="resume container is-max-desktop p-5">
+  <div class="resume container is-max-desktop p-5 is-overflow-auto">
     <div class="toggle-container">
       <div
         class="toggle-switch is-position-fixed is-flex is-justify-content-end is-align-items-center"
@@ -30,7 +30,7 @@ const compiledMarkdown = computed(() => marked.parse(resume))
       />
     </div>
   </div>
-  <div class="effects is-absolute w-100 h-100" v-if="effectsEnabled"></div>
+  <div class="effects" v-if="effectsEnabled"></div>
 </template>
 
 <style>
@@ -53,10 +53,20 @@ const compiledMarkdown = computed(() => marked.parse(resume))
    Effects
    ========================================================================== */
 
+.effects {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
 .effects::before {
   content: ' ';
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -73,7 +83,7 @@ const compiledMarkdown = computed(() => marked.parse(resume))
 .effects::after {
   content: ' ';
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -90,7 +100,7 @@ const compiledMarkdown = computed(() => marked.parse(resume))
    ========================================================================== */
 .toggle-switch {
   width: 100%;
-  z-index: 100;
+  z-index: 1;
   top: 1rem;
   right: 1rem;
 }
@@ -100,9 +110,9 @@ const compiledMarkdown = computed(() => marked.parse(resume))
 
 .slider {
   height: 1.25rem;
-  width: 2.5rem;
+  width: 2.25rem;
   border-radius: 1.25rem;
-  background-color: #003d00;
+  background-color: rgba(0, 0, 0, 0.25);
   position: relative;
   cursor: pointer;
   transition: 0.4s;
@@ -111,10 +121,10 @@ const compiledMarkdown = computed(() => marked.parse(resume))
 .slider::before {
   content: '';
   position: absolute;
-  top: 0.0625rem;
-  left: 0.0625rem;
-  width: 1.125rem;
-  height: 1.125rem;
+  top: 0.1rem;
+  left: 0.1rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   background-color: #00ff00;
   transition: 0.4s;
@@ -124,10 +134,10 @@ const compiledMarkdown = computed(() => marked.parse(resume))
 .slider::after {
   content: '';
   position: absolute;
-  top: 0.0625rem;
-  left: 0.0625rem;
-  width: 1.125rem;
-  height: 1.125rem;
+  top: 0.1rem;
+  left: 0.1rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   transition: 0.4s;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
@@ -139,15 +149,15 @@ const compiledMarkdown = computed(() => marked.parse(resume))
 }
 
 .toggle-switch-input:not(:checked) + .slider::before {
-  background-color: #000000;
+  background-color: #333;
 }
 
 .toggle-switch-input:checked + .slider::before {
-  transform: translateX(1.25rem);
+  transform: translateX(0.9rem);
 }
 
 .toggle-switch-input:checked + .slider::after {
-  transform: translateX(1.25rem);
+  transform: translateX(0.9rem);
 }
 
 /* ==========================================================================
